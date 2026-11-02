@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jogja Pusaka</title>
+    <meta
+      name="description"
+      content="Catatan tentang sejarah, budaya, kuliner, dan wisata di Daerah Istimewa Yogyakarta."
+    />
+    <meta name="theme-color" content="#2f5d3a" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="home-page">
+    <a class="lompat-ke-isi" href="#main">Langsung ke konten</a>
+    <div class="garis-gulir" id="scroll-progress"></div>
+
+    <header class="kepala-situs">
+      <div class="pembungkus-isi">
+        <a class="nama-situs" href="index.html">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 19C5 11 10 5 19 5C19 14 13 19 5 19Z" />
+            <path d="M5 19L13 11" />
+          </svg>
+          Jogja<span>.</span>Pusaka
+        </a>
+
+        <nav class="menu-situs" id="site-nav" aria-label="Menu utama">
+          <a href="index.html" aria-current="page">Beranda</a>
+          <a href="sejarah.html">Sejarah</a>
+          <a href="budaya.html">Budaya</a>
+          <a href="kuliner.html">Kuliner</a>
+          <a href="wisata.html"
+            >Wisata<span class="angka-menu" id="plan-badge" hidden>0</span></a
+          >
+        </nav>
+
+        <div class="kendali-kepala">
+          <button
+            class="tombol-menu"
+            id="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            Menu
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="halaman">
+      <section class="pembuka-utama">
+        <div class="corak-pembuka" aria-hidden="true"></div>
+
+        <div class="pembungkus-isi susunan-pembuka">
+          <div>
+            <span class="tulisan-pembuka"
+              >CERITA DARI YOGYAKARTA</span
+            >
+            <h1>Jogja <em>Pusaka</em></h1>
+            <p class="pengantar-pembuka">
+              Cerita tentang tempat, tradisi, dan keseharian Yogyakarta—dari
+              pusat kota sampai kampung-kampungnya.
+            </p>
+            <div class="label-pembuka">
+              <span class="label-kecil">Kasultanan sejak 1755</span>
+              <span class="label-kecil">Sumbu Filosofi · UNESCO 2023</span>
+              <span class="label-kecil">25 topik pilihan</span>
+            </div>
+            <div class="aksi-pembuka">
+              <a class="tombol" href="#topik">Jelajahi topik</a>
+              <a class="tombol tombol-garis" href="wisata.html">Lihat wisata</a>
+            </div>
+          </div>
+
+          <div class="gambar-pembuka">
+            <div class="gambar-suasana-jogja">
+              <img
+                class="foto-suasana-jogja"
+                src="images/beranda-tugu-jogja-baru.webp"
+                alt="Tugu Pal Putih di tengah Kota Yogyakarta pada siang hari."
+                fetchpriority="high"
+              />
+            </div>
+
+            <p class="kredit-foto-hero">
+              Tugu Pal Putih · Foto CEphoto, Uwe Aranas ·
+              <a href="https://commons.wikimedia.org/wiki/File:Yogyakarta_Indonesia_Tugu-Yogyakarta-02.jpg"
+                >Wikimedia Commons, CC BY-SA 3.0</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="pita-kalimat" aria-label="Cakupan cerita">
+        Kota · kampung · pesisir · perbukitan
+      </div>
+
+      <div class="pembungkus-isi">
+        <section id="topik" aria-labelledby="doors-title">
+          <div class="kepala-bagian muncul-saat-digulir">
+            <h2 id="doors-title">Mau mulai dari <em>mana?</em></h2>
+            <p>
+              Pilih topik yang menarik buatmu. Ada sejarah kota, kesenian,
+              makanan, sampai tempat untuk dikunjungi.
+            </p>
+          </div>
+          <div class="deret-pintu muncul-saat-digulir" id="doors"></div>
+        </section>
+
+        <section
+          class="angka-statistik muncul-saat-digulir"
+          aria-label="Jogja dalam angka"
+        >
+          <div class="angka-sorotan">
+            <strong data-count="1755">0</strong>
+            <span>Tahun Perjanjian Giyanti</span>
+          </div>
+          <div class="angka-sorotan">
+            <strong data-count="5">0</strong>
+            <span>kabupaten/kota di DIY</span>
+          </div>
+          <div class="angka-sorotan">
+            <strong data-count="10">0</strong>
+            <span>peristiwa di linimasa</span>
+          </div>
+          <div class="angka-sorotan">
+            <strong id="topic-count" data-count="25">0</strong>
+            <span>catatan dalam katalog</span>
+          </div>
+        </section>
+
+        <section aria-labelledby="highlight-title">
+          <div class="kepala-bagian muncul-saat-digulir">
+            <h2 id="highlight-title">Beberapa hal yang <em>menarik</em></h2>
+            <p>
+              Satu pilihan berganti setiap kali kamu menekan panah.
+            </p>
+          </div>
+          <div
+            class="sorotan-bergilir muncul-saat-digulir"
+            id="carousel"
+            aria-live="polite"
+          ></div>
+          <div class="kendali-sorotan">
+            <button
+              class="panah-sorotan"
+              id="carousel-prev"
+              type="button"
+              aria-label="Sorotan sebelumnya"
+            >
+              &larr;
+            </button>
+            <button
+              class="panah-sorotan"
+              id="carousel-next"
+              type="button"
+              aria-label="Sorotan berikutnya"
+            >
+              &rarr;
+            </button>
+            <div class="titik-sorotan" id="carousel-dots"></div>
+          </div>
+        </section>
+
+        <section aria-labelledby="day-title">
+          <div class="kepala-bagian muncul-saat-digulir">
+            <h2 id="day-title">Punya waktu sehari di <em>Jogja?</em></h2>
+            <p>
+              Lihat beberapa ide singgah berdasarkan waktu. Sesuaikan lagi
+              dengan jarak dan jam buka tempat yang ingin kamu datangi.
+            </p>
+            <p class="catatan-kecil">
+              Ini hanya contoh. Periksa jam operasional dan waktu tempuh sebelum berangkat.
+            </p>
+          </div>
+          <div
+            class="pilihan-lajur"
+            id="day-tabs"
+            role="tablist"
+            aria-label="Pilih waktu"
+          ></div>
+          <div
+            class="rencana-sehari"
+            id="day-plan"
+            role="tabpanel"
+            aria-live="polite"
+          ></div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Dialog detail, isinya diisi oleh common.js -->
+    <dialog
+      class="jendela-cerita"
+      id="detail-dialog"
+      aria-labelledby="detail-title"
+    >
+      <div class="sampul-jendela" id="detail-cover">
+        <button class="tutup-jendela" id="detail-close" type="button">
+          Tutup
+        </button>
+      </div>
+      <div class="isi-jendela">
+        <span class="label-kecil" id="detail-category"></span>
+        <h3 id="detail-title"></h3>
+        <p id="detail-description"></p>
+        <ul id="detail-facts"></ul>
+        <div class="daftar-label" id="detail-tags"></div>
+        <div class="ukuran-rasa" id="detail-taste"></div>
+        <p>
+          <strong id="detail-place-label"></strong>
+          <span id="detail-place"></span>
+        </p>
+        <button class="tombol" id="detail-plan-button" type="button" hidden>
+          Tambah ke rencana
+        </button>
+      </div>
+    </dialog>
+
+    <div class="pita-bawah" aria-hidden="true"></div>
+
+    <footer class="kaki-situs">
+      <div class="pembungkus-isi">
+        <div class="susunan-bawah">
+          <div class="tentang-situs">
+            <h3>Jogja.Pusaka</h3>
+            <p>
+              Kumpulan catatan pilihan tentang tempat, tradisi, dan keseharian
+              di Yogyakarta.
+            </p>
+          </div>
+
+          <div>
+            <h3>Jelajahi</h3>
+            <a href="index.html">Beranda</a>
+            <a href="sejarah.html">Sejarah</a>
+            <a href="budaya.html">Budaya</a>
+            <a href="kuliner.html">Kuliner</a>
+            <a href="wisata.html">Wisata</a>
+          </div>
+
+          <div>
+            <h3>Fitur</h3>
+            <a href="sejarah.html#timeline">Linimasa dan kuis</a>
+            <a href="budaya.html#studio-title">Studio batik dan saron</a>
+            <a href="kuliner.html#taste-title">Cari lewat rasa</a>
+            <a href="wisata.html#map-title">Peta dan rencana</a>
+          </div>
+
+          <div class="catatan-pengunjung">
+            <h3>Sebelum berkunjung</h3>
+            <p>
+              Jam buka, tiket, dan jadwal acara dapat berubah. Periksa
+              pengumuman dari pengelola tempat sebelum berangkat.
+            </p>
+            <a href="images/README.txt">Kredit dan catatan foto</a>
+          </div>
+        </div>
+
+        <div class="catatan-paling-bawah">
+          <span
+            >© Jogja Pusaka · Catatan tentang Yogyakarta</span
+          >
+          <button type="button" id="back-to-top">Kembali ke atas</button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/beranda.js"></script>
+  </body>
+</html>
